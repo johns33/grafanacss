@@ -1,13 +1,12 @@
 /* ── MSP Monitor — Grafana 13 Theme ── */
 
 /* Sfondo dashboard */
-[class*="main-view"],
-[class*="scroll-canvas"],
-[class*="dashboard-canvas"],
-body { background-color: #0f1117 !important; }
+[class*="main-view"] { background-color: #0f1117 !important; }
+[class*="scroll-canvas"] { background-color: #0f1117 !important; }
+[class*="dashboard-canvas"] { background-color: #0f1117 !important; }
 
 /* Panel container */
-section[class*="panel-container"] {
+section[class*="panel-container"][class*="panel-container"] {
   background: #161922 !important;
   border: 0.5px solid rgba(255,255,255,0.07) !important;
   border-radius: 10px !important;
@@ -15,33 +14,20 @@ section[class*="panel-container"] {
   transition: border-color 0.2s ease !important;
 }
 
-section[class*="panel-container"]:hover {
+section[class*="panel-container"][class*="panel-container"]:hover {
   border-color: rgba(255,255,255,0.13) !important;
 }
 
-/* Border-top colorati per panel KPI */
-[data-testid="data-testid Panel header Server Totali"] {
-  border-top: 2px solid #1a6fd4 !important;
-}
-[data-testid="data-testid Panel header Server Online"] {
-  border-top: 2px solid #1a8a4a !important;
-}
-[data-testid="data-testid Panel header Server Offline"] {
-  border-top: 2px solid #c0392b !important;
-}
-[data-testid="data-testid Panel header Alert Attivi"] {
-  border-top: 2px solid #d4580f !important;
-}
-[data-testid="data-testid Panel header Alert NEEDS_ATTENTION"] {
-  border-top: 2px solid #0e7a68 !important;
-}
-[data-testid="data-testid Panel header Clienti Monitorati"] {
-  border-top: 2px solid #6c3ab5 !important;
-}
+/* Border-top colorati */
+[data-panelid="1"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #1a6fd4 !important; }
+[data-panelid="2"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #1a8a4a !important; }
+[data-panelid="3"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #c0392b !important; }
+[data-panelid="4"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #d4580f !important; }
+[data-panelid="5"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #0e7a68 !important; }
+[data-panelid="6"] section[class*="panel-container"][class*="panel-container"] { border-top: 2px solid #6c3ab5 !important; }
 
 /* Titoli panel */
-[class*="panel-title"] h2,
-[class*="panel-title"] {
+[class*="panel-title"][class*="panel-title"] h2 {
   font-size: 10px !important;
   font-weight: 500 !important;
   letter-spacing: 0.1em !important;
@@ -49,26 +35,10 @@ section[class*="panel-container"]:hover {
   color: #6b6f82 !important;
 }
 
-/* Row titles */
-[class*="dashboard-row"] button,
-[class*="dashboardRow"] button {
-  font-size: 9px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  color: #454857 !important;
-}
-
-[class*="dashboard-row"] {
-  border-bottom: 0.5px solid rgba(255,255,255,0.06) !important;
-}
-
 /* Tabelle */
-[data-testid="data-testid panel content"] table {
-  border-collapse: collapse !important;
-}
+[class*="panel-content"][class*="panel-content"] table { border-collapse: collapse !important; }
 
-[data-testid="data-testid panel content"] thead th {
+[class*="panel-content"][class*="panel-content"] thead th {
   background: #1b1e2b !important;
   color: #545769 !important;
   font-size: 9px !important;
@@ -79,14 +49,14 @@ section[class*="panel-container"]:hover {
   padding: 8px 14px !important;
 }
 
-[data-testid="data-testid panel content"] tbody td {
+[class*="panel-content"][class*="panel-content"] tbody td {
   font-size: 12px !important;
   color: #9da0b0 !important;
   border-bottom: 0.5px solid rgba(255,255,255,0.03) !important;
   padding: 8px 14px !important;
 }
 
-[data-testid="data-testid panel content"] tbody tr:hover td {
+[class*="panel-content"][class*="panel-content"] tbody tr:hover td {
   background: rgba(255,255,255,0.025) !important;
 }
 
